@@ -4,6 +4,7 @@ function purchaseBook(title, author, price, discountPercentage, taxPercentage, i
   let discountAmount = price - discountedPrice; // calculate amount of discount
   let taxAmount = discountedPrice * (taxPercentage / 100); // calculate amount of tax
   let totalPrice = discountedPrice + taxAmount; // calculate total price after tax
+  let IsAvailable = isAvailable;
   
     
 
@@ -17,9 +18,9 @@ function purchaseBook(title, author, price, discountPercentage, taxPercentage, i
   console.log(`Tax: ${taxPercentage}%`);
   console.log(`Tax amount: $${taxAmount.toFixed(2)}`);
   console.log(`Total price: $${totalPrice.toFixed(2)}`);
-  console.log('Is Available: ',isAvailable);
+  console.log('Is Available: ', IsAvailable);
   
 }
 
 // example usage
-purchaseBook("THE SUBTLE ART OF NOT GIVING A FUCK", "Mark Manson", 320000, 20, 8.5, isAvailable);
+purchaseBook("THE SUBTLE ART OF NOT GIVING A FUCK", "Mark Manson", 320000, 20, 8.5, true);
